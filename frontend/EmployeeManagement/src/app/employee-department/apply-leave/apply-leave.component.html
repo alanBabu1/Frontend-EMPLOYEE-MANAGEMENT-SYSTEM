@@ -1,0 +1,49 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row" style="width: 60%;">
+    
+        <label class="col-sm-2 col-form-label">EMPLOYEE NAME</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="user"
+            placeholder="ENTER EMPLOYEE NAME">
+        </div>
+
+        <label class="col-sm-2 col-form-label">APPLY DATE</label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" [(ngModel)]="apply_date"
+            placeholder="ENTER APPLY DATE ">
+        </div>
+
+        <label class="col-sm-2 col-form-label">NATURE OF LEAVE</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="nature_of_leave"
+            placeholder="ENTER NATURE OF LEAVE ">
+        </div>
+
+        <label class="col-sm-2 col-form-label">START DATE</label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" [(ngModel)]="first_Day"
+            placeholder="ENTER START DATE">
+        </div>
+
+        <label class="col-sm-2 col-form-label">END DATE </label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" [(ngModel)]="last_Day"
+            placeholder="ENTER END DATE"> <br>
+        </div>
+
+        <label class="col-sm-2 col-form-label">NUMBER OF DAYS</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]=" number_Of_Days"
+            placeholder="ENTER NUMBER OF DAYS">
+        </div>
+
+        
+    
+    <button (click)="addleave()" *ngIf="emp.number_Of_Days==0" class="btn btn-primary">
+        Add
+    </button>
+    
+    <button (click)="updateleave()" *ngIf="emp.number_Of_Days!=0" class="btn btn-primary">
+        Update
+    </button>

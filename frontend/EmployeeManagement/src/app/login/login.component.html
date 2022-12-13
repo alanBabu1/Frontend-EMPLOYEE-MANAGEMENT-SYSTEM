@@ -1,0 +1,30 @@
+
+<div class="container-fluid mainContainer">
+  <div class="row">
+      <div class="col-4 c5">
+       
+          <img class="img1" src="https://img.icons8.com/dusk/64/null/add-user-group-man-woman.png"/>
+       
+      </div>
+<!-- login -->
+      <div class="col-4 loginPage">
+          <h1 class="login-div">LOGIN PAGE</h1>
+          <form [formGroup]="myform" (ngSubmit)="onSubmit()" class="form-container">
+            <div class="form-group">
+            <label for="text">USER NAME</label>
+            <input type="text" class="form-control" formControlName="username">
+            </div>
+            <div class="form-group">
+            <label for="InputPassword1">PASSWORD</label>
+            <input type="password" class="form-control" id="InputPassword1" formControlName="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        
+        </form>
+      </div>
+      <div class="col-4 c5">
+          <img class="img1" src="https://img.icons8.com/dusk/64/null/login-rounded-right.png"/>
+      </div>
+  </div>
+  
+</div>  

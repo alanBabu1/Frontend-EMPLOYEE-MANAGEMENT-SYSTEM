@@ -1,0 +1,101 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row" style="width: 80%;">
+    
+        <label class="col-sm-2 col-form-label">EMPLOYEE NAME</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="employee_Name"
+            placeholder="ENTER YOUR NAME">
+        </div> 
+
+        <label class="col-sm-2 col-form-label">EMAIL ID</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" [(ngModel)]="email"
+            placeholder="ENTER YOUR EMAIL ID"> <br> 
+        </div> 
+
+        <label class="col-sm-2 col-form-label">CONTACT NUMBER</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" [(ngModel)]="contact_Number"
+            placeholder="ENTER YOUR NUMBER">
+        </div>  
+
+        <label class="col-sm-2 col-form-label">EMERGENCY NUMBER</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" [(ngModel)]="emergency_Contact_Number"
+            placeholder="ENTER YOUR NUMBER">
+        </div>
+
+        <label class="col-sm-2 col-form-label">ADDRESS </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="address"
+            placeholder="ENTER YOUR ADDRESS"> <br> 
+        </div>
+
+        <label class="col-sm-2 col-form-label">POSITION</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="position"
+            placeholder="ENTER YOUR DESIGINATION"> <br>
+        </div>
+
+        <label class="col-sm-2 col-form-label">DATE OF BIRTH</label>
+        <div class="col-sm-10">
+            <input type="date"  [(ngModel)]="dOB"> <br> <br>
+        </div>
+
+        <label class="col-sm-2 col-form-label">MARTIAL STATUS</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="martial_Status"
+            placeholder="ENTER YOUR MARTIAL STATUS">
+        </div>
+
+        <label class="col-sm-2 col-form-label"> BLOOD GROUP</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="blood_Group"
+            placeholder="ENTER YOUR BLOOD GROUP"> <br> 
+        </div>
+
+        <label class="col-sm-2 col-form-label">JOB TITLE</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="job_Title"
+            placeholder="ENTER YOUR JOB TITLE"> <br>
+        </div>
+
+        <label class="col-sm-2 col-form-label">WORK LOCATION</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="work_Location"
+            placeholder="ENTER YOUR WORK LOCATION">
+        </div>
+
+        <label class="col-sm-2 col-form-label">DATE OF JOINING</label>
+        <div class="col-sm-10">
+            <input type="date"  [(ngModel)]="date_Of_Joining">
+        </div>
+
+        <label class="col-sm-2 col-form-label">REPORTING TO</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="reporting_To"
+            placeholder="ENTER YOUR REPORTING MANAGER"> <br>
+        </div>
+
+        <label class="col-sm-2 col-form-label">LINKEDIN LINK</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="linkedin_Link"
+            placeholder="ENTER YOUR LINKEDIN LINK">
+        </div>
+    
+    </div>
+    <div class="ml-3 bd-highlight" style="width: 20%;">
+    <img [src]=PhotoFilePath height="250px;" width="200px;">
+    <input type="file" (change)="uploadPhoto($event)" class="mt-2"/>
+    </div>
+    </div>
+    
+    
+    <button (click)="addEmployee()" *ngIf="emp.EmployeeId==0" class="btn btn-primary">
+        Add
+    </button>
+    
+    <button (click)="updateEmployee()" *ngIf="emp.EmployeeId!=0" class="btn btn-primary">
+        Update
+    </button>

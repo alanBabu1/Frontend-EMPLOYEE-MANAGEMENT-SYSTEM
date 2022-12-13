@@ -1,0 +1,37 @@
+<app-navbar-emp></app-navbar-emp>
+<body>
+  <div class="container a1">
+      <div class="row main">
+          <div class="col-6  img-div">
+              <h1 class="a1">REGISTRATION  <span style="color: rgb(246, 21, 21);"> PAGE</span></h1>
+              <img class="img1" src="https://img.icons8.com/dusk/100/null/edit-user-male.png"/> 
+          </div>
+          <div class="col-6">
+            <form [formGroup]="myform" (ngSubmit)="onSubmit()" class="form-container">
+              <div class="form-group">
+              <label for="text">USER NAME</label>
+              <input type="text" class="form-control" formControlName="username">
+              </div>
+  
+              <div class="form-group">
+                  <label for="email">EMAIL</label>
+                  <input type="email" class="form-control" formControlName="email">
+                  </div>
+  
+              <div class="form-group">
+              <label for="InputPassword1">PASSWORD</label>
+              <input type="password" class="form-control" id="InputPassword1" formControlName="password" placeholder="Password">
+              </div>
+  
+              <div class="form-group">
+                  <label for="InputPassword2">CONFIRM PASSWORD </label>
+                  <input type="password" class="form-control" id="InputPassword2" formControlName="password2" placeholder=" Confirm Password">
+                  </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          
+          </form>
+          </div>
+      </div>
+  </div>
+
+</body>
